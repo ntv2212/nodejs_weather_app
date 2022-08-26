@@ -23,14 +23,14 @@ app.use(express.static(publicDirectory));
 app.get("", (req, res) => {
   res.render("index", {
     title: "Weather App",
-    name: "Vin",
+    name: "Vinh Nguyen",
   });
 });
 
 app.get("/about", (req, res) => {
   res.render("about", {
     title: "About me",
-    name: "Vin",
+    name: "Vinh Nguyen",
   });
 });
 
@@ -38,7 +38,7 @@ app.get("/help", (req, res) => {
   res.render("help", {
     title: "Help page",
     helpText: "This is help page",
-    name: "Vin",
+    name: "Vinh Nguyen",
   });
 });
 
@@ -86,7 +86,7 @@ app.get("/help/*", (req, res) => {
   res.render("404", {
     errorMessage: "Help articles not found.",
     title: "404",
-    name: "Vin",
+    name: "Vinh Nguyen",
   });
 });
 
@@ -94,7 +94,7 @@ app.get("*", (req, res) => {
   res.render("404", {
     errorMessage: "Page not found.",
     title: "404",
-    name: "Vin",
+    name: "Vinh Nguyen",
   });
 });
 
