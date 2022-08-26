@@ -8,18 +8,16 @@ const messageTwo = document.querySelector("#message-2");
 // messageOne.textContent = "aaa";
 
 const getWeather = (location) => {
-  fetch(`http://localhost:3000/weather?address=${location}`).then(
-    (response) => {
-      response.json().then((data) => {
-        if (data.error) {
-          messageOne.textContent = data.error;
-        } else {
-          messageOne.textContent = data.location;
-          messageTwo.textContent = data.forecast;
-        }
-      });
-    }
-  );
+  fetch(`/weather?address=${location}`).then((response) => {
+    response.json().then((data) => {
+      if (data.error) {
+        messageOne.textContent = data.error;
+      } else {
+        messageOne.textContent = data.location;
+        messageTwo.textContent = data.forecast;
+      }
+    });
+  });
 };
 
 weatherForm.addEventListener("submit", (e) => {
